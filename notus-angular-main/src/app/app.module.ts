@@ -48,6 +48,10 @@ import { NotificationDropdownComponent } from "./components/dropdowns/notificati
 import { SidebarComponent } from "./components/sidebar/sidebar.component";
 import { UserDropdownComponent } from "./components/dropdowns/user-dropdown/user-dropdown.component";
 
+import { ReactiveFormsModule } from "@angular/forms";
+import {AuthService} from "./services/auth.service";
+import {HttpClientModule} from "@angular/common/http";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -85,8 +89,8 @@ import { UserDropdownComponent } from "./components/dropdowns/user-dropdown/user
     LandingComponent,
     ProfileComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
-  providers: [],
+  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule, HttpClientModule],
+  providers: [AuthService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
