@@ -50,7 +50,11 @@ import { UserDropdownComponent } from "./components/dropdowns/user-dropdown/user
 
 import { ReactiveFormsModule } from "@angular/forms";
 import {AuthService} from "./services/auth.service";
-import {HttpClientModule} from "@angular/common/http";
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
+import { CreateGameComponent } from './create-game/create-game.component';
+import {GameService} from './services/game.service';
+import {AuthGuardService} from "./services/auth-guard.service";
+import {TokenInterceptorService} from "./services/token-interceptor.service";
 
 @NgModule({
   declarations: [
@@ -88,9 +92,19 @@ import {HttpClientModule} from "@angular/common/http";
     IndexComponent,
     LandingComponent,
     ProfileComponent,
+    CreateGameComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule, HttpClientModule],
-  providers: [AuthService],
+  providers: [
+    AuthService,
+    GameService,
+    AuthGuardService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptorService,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

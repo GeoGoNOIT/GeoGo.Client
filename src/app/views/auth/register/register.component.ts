@@ -19,7 +19,10 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {}
 
   register() {
-    this.authService.register(this.registerForm.value)
+    this.authService.register(this.registerForm.value).subscribe(data => {
+      console.log(data);
+      this.authService.saveToken(data.token);
+    })
   }
 
   get username() {
