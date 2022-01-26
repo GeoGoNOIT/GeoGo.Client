@@ -413,8 +413,21 @@ img {
 textarea {
   resize: vertical;
 }
-
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  opacity: 1;
+  color: #a1a1aa;
+}
 input::-moz-placeholder, textarea::-moz-placeholder {
+  opacity: 1;
+  color: #a1a1aa;
+}
+
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  opacity: 1;
+  color: #a1a1aa;
+}
+
+input::-ms-input-placeholder, textarea::-ms-input-placeholder {
   opacity: 1;
   color: #a1a1aa;
 }
@@ -1276,6 +1289,10 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgba(167, 243, 208, var(--tw-bg-opacity));
 }
+.bg-emerald-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(110, 231, 183, var(--tw-bg-opacity));
+}
 
 .bg-emerald-400 {
   --tw-bg-opacity: 1;
@@ -1287,6 +1304,20 @@ select {
   background-color: rgba(16, 185, 129, var(--tw-bg-opacity));
 }
 
+.bg-emerald-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(5, 150, 105, var(--tw-bg-opacity));
+}
+
+.bg-emerald-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(6, 95, 70, var(--tw-bg-opacity));
+}
+
+.bg-emerald-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgba(6, 78, 59, var(--tw-bg-opacity));
+}
 .bg-yellow-500 {
   --tw-bg-opacity: 1;
   background-color: rgba(234, 179, 8, var(--tw-bg-opacity));
