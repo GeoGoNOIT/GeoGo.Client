@@ -1,58 +1,46 @@
-<!-- Header -->
 <div class="relative bg-emerald-600 md:pt-32 pb-32 pt-12">
+  <h1 class="text-white font-semibold text-5xl dashboard-title">What are you going to play today?</h1>
   <div class="px-4 md:px-10 mx-auto w-full">
+    <h3 class="font-semibold text-lg recently-played-label"
+      [ngClass]="color === 'light' ? 'text-blueGray-700' : 'text-white'">
+      🎮 Recently played
+    </h3>
     <div>
-      <!-- Card stats -->
       <div class="flex flex-wrap">
         <div class="w-full lg:w-6/12 xl:w-3/12 px-4">
-          <app-card-stats
-            statSubtitle="TRAFFIC"
-            statTitle="350,897"
-            statArrow="up"
-            statPercent="3.48"
-            statPercentColor="text-emerald-500"
-            statDescripiron="Since last month"
-            statIconName="far fa-chart-bar"
-            statIconColor="bg-red-500"
-          ></app-card-stats>
+          <app-card-stats statTitle="Erasmus CCT Bulgaria" statSubtitle="Viktor Vukev" statIconName="fas fa-city"
+            statIconColor="bg-red-500"></app-card-stats>
         </div>
         <div class="w-full lg:w-6/12 xl:w-3/12 px-4">
-          <app-card-stats
-            statSubtitle="NEW USERS"
-            statTitle="2,356"
-            statArrow="down"
-            statPercent="3.48"
-            statPercentColor="text-red-500"
-            statDescripiron="Since last week"
-            statIconName="fas fa-chart-pie"
-            statIconColor="bg-orange-500"
-          ></app-card-stats>
+          <app-card-stats statTitle="Erasmus CCT Bulgaria" statSubtitle="Viktor Vukev" statIconName="fas fa-camera"
+            statIconColor="bg-pink-500"></app-card-stats>
         </div>
         <div class="w-full lg:w-6/12 xl:w-3/12 px-4">
-          <app-card-stats
-            statSubtitle="SALES"
-            statTitle="924"
-            statArrow="down"
-            statPercent="1.10"
-            statPercentColor="text-orange-500"
-            statDescripiron="Since yesterday"
-            statIconName="fas fa-users"
-            statIconColor="bg-pink-500"
-          ></app-card-stats>
+          <app-card-stats statTitle="Erasmus CCT Bulgaria" statSubtitle="Viktor Vukev"
+            statIconName="fas fa-chalkboard-teacher" statIconColor="bg-orange-500"></app-card-stats>
         </div>
         <div class="w-full lg:w-6/12 xl:w-3/12 px-4">
-          <app-card-stats
-            statSubtitle="PERFORMANCE"
-            statTitle="49,65%"
-            statArrow="up"
-            statPercent="12"
-            statPercentColor="text-emerald-500"
-            statDescripiron="Since last month"
-            statIconName="fas fa-percent"
-            statIconColor="bg-emerald-500"
-          ></app-card-stats>
+          <app-card-stats statTitle="Erasmus CCT Bulgaria" statSubtitle="Viktor Vukev"
+            statIconName="fas fa-chalkboard-teacher" statIconColor="bg-emerald-500"></app-card-stats>
         </div>
       </div>
     </div>
+
+    <h3 class="font-semibold text-lg activity-label" [ngClass]="color === 'light' ? 'text-blueGray-700' : 'text-white'">
+      ⭐ Activity
+    </h3>
   </div>
 </div>
+
+<style>
+  .recently-played-label {
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .activity-label {
+    margin-left: 1rem;
+    margin-top: 2.5rem;
+    margin-bottom: none;
+  }
+</style>

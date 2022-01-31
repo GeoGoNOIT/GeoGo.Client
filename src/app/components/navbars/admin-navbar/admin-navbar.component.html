@@ -1,35 +1,244 @@
-<!-- Navbar -->
 <nav
-  class="absolute top-0 left-0 w-full z-10 bg-transparent md:flex-row md:flex-nowrap md:justify-start flex items-center p-4"
->
-  <div
-    class="w-full mx-autp items-center flex justify-between md:flex-nowrap flex-wrap md:px-10 px-4"
-  >
-    <!-- Brand -->
-    <a
-      class="text-white text-sm uppercase hidden lg:inline-block font-semibold"
-      href="#pablo"
-      >Dashboard</a
-    >
-    <!-- Form -->
-    <form
-      class="md:flex hidden flex-row flex-wrap items-center lg:ml-auto mr-3"
-    >
+  class="absolute top-0 left-0 w-full z-10 bg-transparent md:flex-row md:flex-nowrap md:justify-start flex items-center p-8">
+  <div class="w-full mx-autp items-center flex justify-between md:flex-nowrap flex-wrap md:px-10 px-4">
+    <form class="search-form">
       <div class="relative flex w-full flex-wrap items-stretch">
-        <span
-          class="z-10 h-full leading-snug font-normal absolute text-center text-blueGray-300 absolute bg-transparent rounded text-base items-center justify-center w-8 pl-3 py-3"
-          ><i class="fas fa-search"></i
-        ></span>
-        <input
-          type="text"
-          placeholder="Search here..."
-          class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm shadow outline-none focus:outline-none focus:ring w-full pl-10"
-        />
+        <input type="search" value="" placeholder="Find a masterpiece..." class="search-input">
+        <button type="submit" class="search-button">
+          <i class="fas fa-search"></i>
+        </button>
+        <div class="search-option">
+          <div>
+            <input name="type" type="radio" value="type-users" id="type-users" style="border:0; outline:none;">
+            <label for="type-users">
+				<i class="fas fa-tags"></i>
+              <span>Tags</span>
+            </label>
+          </div>
+          <div>
+            <input name="type" type="radio" value="type-special" id="type-special" checked="">
+            <label for="type-special">
+              <i class="fas fa-book"></i>
+              <span>Library</span>
+            </label>
+          </div>
+        </div>
       </div>
     </form>
-    <!-- User -->
-    <ul class="flex-col md:flex-row list-none items-center hidden md:flex">
-      <app-user-dropdown class="block"></app-user-dropdown>
-    </ul>
+    
+    <div class="search-bar-button-join">
+      <button class="join-button">
+        Join game
+      </button>
+    </div>
   </div>
 </nav>
+
+<style>
+  
+	.search-form.focus {
+		box-shadow: 0 3px 4px rgba(0, 0, 0, 0.15);
+   }
+	.search-input {
+		position: absolute;
+		top: 10px;
+		left: 38px;
+		font-size: 14px;
+		background: none;
+		color: #5a6674;
+		width: 80%;
+		margin: 0 auto;
+		height: 20px;
+		border: none;
+		appearance: none;
+		outline-width: 0;
+   }
+	.search-input::-webkit-search-cancel-button {
+		appearance: none;
+   }
+   
+   .search-input:focus{
+	 -webkit-appearance: none;
+   }
+   
+	.search-button {
+		position: absolute;
+		top: 10px;
+		left: 10px;
+		height: 20px;
+		width: 20px;
+		padding: 0;
+		margin: 0;
+		border: none;
+		background: none;
+		outline: none !important;
+		cursor: pointer;
+   }
+	.search-button i {
+		width: 20px;
+		height: 20px;
+		fill: #5a6674;
+   }
+	.search-option {
+		position: absolute;
+		text-align: right;
+		top: 10px;
+		right: 15px;
+   }
+	.search-option div {
+		position: relative;
+		display: inline-block;
+		margin: 0 1px;
+		cursor: pointer;
+   }
+	.search-option div input {
+		position: absolute;
+		top: 0;
+		left: 0;
+		opacity: 0.01;
+		cursor: pointer;
+   }
+   
+   .search-option div input:focus {
+	 outline: none;
+   }
+   
+	.search-option div span {
+		position: absolute;
+		display: block;
+		text-align: center;
+		left: 50%;
+		transform: translateX(-50%);
+		opacity: 0;
+		background: #929aa3;
+		color: #fff;
+		font-size: 9px;
+		letter-spacing: 1px;
+		line-height: 1;
+		text-transform: uppercase;
+		padding: 4px 7px;
+		border-radius: 12px;
+		top: -18px;
+		transition: all 0.2s ease-in-out;
+   }
+	.search-option div span::after {
+		content: '';
+		position: absolute;
+		bottom: -3px;
+		left: 50%;
+		transform: translateX(-50%);
+		border-top: 4px solid #929aa3;
+		border-left: 4px solid transparent;
+		border-right: 4px solid transparent;
+		transition: all 0.2s ease-in-out;
+   }
+	.search-option div:hover span {
+		opacity: 1;
+		top: -21px;
+   }
+	.search-option div label {
+		display: block;
+		cursor: pointer;
+   }
+	.search-option div i {
+		height: 20px;
+		width: 20px;
+		fill: #5a6674;
+		opacity: 0.6;
+		transition: all 0.2s ease-in-out;
+		pointer-events: none;
+   }
+	.search-option div:hover i {
+		opacity: 1;
+	}
+   
+	 .search-bar-button-join {
+	   width: 12%;
+	   border-radius: 40px;
+	   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+	   transform: translate(-50%, -50%);
+	   background: #fff;
+	   transition: all 0.3s ease;
+	   text-decoration: rgba(16, 185, 129, var(--tw-bg-opacity));
+	   font-weight: bold;
+	 }
+	.join-button {
+		outline: none;
+		height: 40px;
+		text-align: center;
+		width: 130px;
+		border-radius: 40px;
+		background: hsl(161, 100%, 88%);
+		color: #1ecd97;
+		letter-spacing: 1px;
+		text-shadow: 0;
+		font-size: 13px;
+		font-weight: bold;
+		cursor: pointer;
+		transition: all 0.25s ease;
+   }
+   .join-button:hover {
+		color: white;
+		background: #1ecd97;
+   }
+   .join-button:active {
+		letter-spacing: 2px;
+   }
+	.onclic {
+		width: 40px;
+		border-color: #bbb;
+		border-width: 3px;
+		font-size: 0;
+		border-left-color: #1ecd97;
+		animation: rotating 2s 0.25s linear infinite;
+   }
+	.onclic:after {
+		content: "";
+   }
+	.onclic:hover {
+		color: #1ecd97;
+		background: white;
+   }
+	.validate {
+		font-size: 13px;
+		color: white;
+		background: #1ecd97;
+   }
+	.validate:after {
+		font-family: 'FontAwesome';
+		content: "\f00c";
+   }
+	@keyframes rotating {
+		from {
+			transform: rotate(0deg);
+	   }
+		to {
+			transform: rotate(360deg);
+	   }
+   }
+   
+   .search-form {
+		position: relative;
+		top: 50%;
+		left: 36%;
+		width: 80%;
+		margin: 0 auto;
+		height: 40px;
+		border-radius: 40px;
+		box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+		transform: translate(-50%, -50%);
+		background: #fff;
+		transition: all 0.3s ease;
+   }
+   
+   @media only screen and (max-width: 1000px) {
+	 .search-bar-button-join{
+		 display: none;
+	 }
+	 .search-form{
+		 width: 100%;
+		 left: 50%;
+	 }
+   }
+	
+   </style>
