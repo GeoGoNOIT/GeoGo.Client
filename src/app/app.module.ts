@@ -55,6 +55,7 @@ import { CreateGameComponent } from './create-game/create-game.component';
 import {GameService} from './services/game.service';
 import {AuthGuardService} from "./services/auth-guard.service";
 import {TokenInterceptorService} from "./services/token-interceptor.service";
+import { CreateGameDetailsComponent } from './create-game-details/create-game-details.component';
 
 @NgModule({
   declarations: [
@@ -93,6 +94,7 @@ import {TokenInterceptorService} from "./services/token-interceptor.service";
     LandingComponent,
     ProfileComponent,
     CreateGameComponent,
+    CreateGameDetailsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule, HttpClientModule],
   providers: [

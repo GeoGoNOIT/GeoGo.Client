@@ -20,6 +20,7 @@ import { IndexComponent } from './views/index/index.component';
 import { LandingComponent } from './views/landing/landing.component';
 import { ProfileComponent } from './views/profile/profile.component';
 import {CreateGameComponent} from './create-game/create-game.component';
+import {CreateGameDetailsComponent} from './create-game-details/create-game-details.component';
 import {AuthGuardService} from "./services/auth-guard.service";
 
 const routes: Routes = [
@@ -42,12 +43,13 @@ const routes: Routes = [
     children: [
       { path: 'login', component: LoginComponent },
       { path: 'register', component: RegisterComponent },
+      { path: 'create', component: CreateGameComponent , canActivate: [AuthGuardService] },
+      { path: 'create/details', component: CreateGameDetailsComponent , canActivate: [AuthGuardService] },
       { path: '', redirectTo: 'login', pathMatch: 'full' },
     ],
   },
   // no layout views
   { path: 'profile', component: ProfileComponent },
-  { path: 'create', component: CreateGameComponent , canActivate: [AuthGuardService] },
   { path: 'landing', component: LandingComponent},
   { path: '', component: IndexComponent },
   { path: '**', redirectTo: '', pathMatch: 'full' },
