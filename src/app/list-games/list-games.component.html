@@ -1,0 +1,10 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-3" *ngFor="let game of games">
+      <h1>{{ game.id }}</h1>
+      <a routerLink="/games/{{ game.id }}">See game info</a>
+      <button (click)="editGame(game.id)">Edit</button>
+      <button (click)="deleteGame(game.id)">Delete</button>
+    </div>
+  </div>
+</div>
