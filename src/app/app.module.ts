@@ -58,6 +58,7 @@ import {TokenInterceptorService} from "./services/token-interceptor.service";
 import { ListGamesComponent } from './list-games/list-games.component';
 import { DetailsGameComponent } from './details-game/details-game.component';
 import { EditGameComponent } from './edit-game/edit-game.component';
+import { ErrorInterceptorService } from "./services/error-interceptor.service";
 
 @NgModule({
   declarations: [
@@ -108,6 +109,11 @@ import { EditGameComponent } from './edit-game/edit-game.component';
     {
       provide: HTTP_INTERCEPTORS,
       useClass: TokenInterceptorService,
+      multi: true
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: ErrorInterceptorService,
       multi: true
     }
   ],
