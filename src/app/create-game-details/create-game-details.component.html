@@ -22,11 +22,99 @@
             <h6 class="text-blueGray-400 text-sm mt-3 mb-0 font-bold uppercase">
                 Urban game
             </h6>
-            <a class="font-bold text-blueGray-700 hover:text-blueGray-500 ease-linear transition-all duration-150 mt-2"
-                (click)="toggleModal()">
-                Visibility 👀
-            </a>
+
+            <details>
+                <summary>
+                    <div class="font-bold text-blueGray-700 hover:text-blueGray-500 ease-linear transition-all duration-150 mt-2"
+                        style="cursor:pointer;">
+                        Visibility 👀
+                    </div>
+                    <div class="details-modal-overlay"></div>
+                </summary>
+                <div class="details-modal z-50">
+                    <div class="details-modal-close">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M13.7071 1.70711C14.0976 1.31658 14.0976 0.683417 13.7071 0.292893C13.3166 -0.0976311 12.6834 -0.0976311 12.2929 0.292893L7 5.58579L1.70711 0.292893C1.31658 -0.0976311 0.683417 -0.0976311 0.292893 0.292893C-0.0976311 0.683417 -0.0976311 1.31658 0.292893 1.70711L5.58579 7L0.292893 12.2929C-0.0976311 12.6834 -0.0976311 13.3166 0.292893 13.7071C0.683417 14.0976 1.31658 14.0976 1.70711 13.7071L7 8.41421L12.2929 13.7071C12.6834 14.0976 13.3166 14.0976 13.7071 13.7071C14.0976 13.3166 14.0976 12.6834 13.7071 12.2929L8.41421 7L13.7071 1.70711Z"
+                                fill="black" />
+                        </svg>
+                    </div>
+                    <div class="details-modal-title">
+                        <h1>Who can see this game?</h1>
+                    </div>
+                    <div class="details-modal-content">
+                        <label class="mx-4">Choose the access:</label>
+                        <select name="visibility" id="visibility">
+                            <option value="everyone">Everyone 😃</option>
+                            <option value="just me">Just me 😐</option>
+                        </select>
+                        <br><br>
+                        <button
+                            class="bg-emerald-600 text-white active:bg-emerald-700 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 ease-linear transition-all duration-150 float-right"
+                            type="button">
+                            Save changes
+                        </button>
+                    </div>
+                </div>
+            </details>
+
+        </div><br>
+
+        <div class="text-center flex justify-between">
+            <div class="relative flex w-full flex-wrap items-stretch mb-3">
+                <span
+                    class="text-xs font-semibold rounded-full text-emerald-600 bg-emerald-200 uppercase last:mr-0 mr-1"
+                    style="padding: 0.7rem">
+                    Bulgaria <i class="fas fa-times"></i>
+                </span>
+                <span
+                    class="text-xs font-semibold rounded-full text-emerald-600 bg-emerald-200 uppercase last:mr-0 mr-1"
+                    style="padding: 0.7rem">
+                    Erasmus <i class="fas fa-times"></i>
+                </span>
+                <span
+                    class="text-xs font-semibold rounded-full text-emerald-600 bg-emerald-200 uppercase last:mr-0 mr-1"
+                    style="padding: 0.7rem">
+                    CCT <i class="fas fa-times"></i>
+                </span>
+                <span class="text-xs font-semibold rounded-full text-emerald-600 bg-emerald-200 last:mr-0 mr-1"
+                    style="padding: 0.7rem">
+                    <details>
+                        <summary>
+                            <div>
+                                <i class="fas fa-plus"></i>
+                            </div>
+                            <div class="details-modal-overlay"></div>
+                        </summary>
+                        <div class="details-modal z-50">
+                            <div class="details-modal-close">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                    fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M13.7071 1.70711C14.0976 1.31658 14.0976 0.683417 13.7071 0.292893C13.3166 -0.0976311 12.6834 -0.0976311 12.2929 0.292893L7 5.58579L1.70711 0.292893C1.31658 -0.0976311 0.683417 -0.0976311 0.292893 0.292893C-0.0976311 0.683417 -0.0976311 1.31658 0.292893 1.70711L5.58579 7L0.292893 12.2929C-0.0976311 12.6834 -0.0976311 13.3166 0.292893 13.7071C0.683417 14.0976 1.31658 14.0976 1.70711 13.7071L7 8.41421L12.2929 13.7071C12.6834 14.0976 13.3166 14.0976 13.7071 13.7071C14.0976 13.3166 14.0976 12.6834 13.7071 12.2929L8.41421 7L13.7071 1.70711Z"
+                                        fill="black" />
+                                </svg>
+                            </div>
+                            <div class="details-modal-title">
+                                <h1>Add new tag</h1>
+                            </div>
+                            <div class="details-modal-content">
+                                <label class="text-sm mr-2">Enter a tag:</label>
+                                <input type="text">
+                                <br><br>
+                                <button
+                                    class="bg-emerald-600 text-white active:bg-emerald-700 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 ease-linear transition-all duration-150 float-right"
+                                    type="button">
+                                    Add
+                                </button>
+                            </div>
+                        </div>
+                    </details>
+
+                </span>
+            </div>
         </div>
+
     </div>
     <div class="flex-auto px-4 lg:px-10 py-10 pt-0">
         <form>
@@ -34,96 +122,217 @@
                 General Information
             </h6>
             <div class="flex flex-wrap">
-                <div class="w-full lg:w-12/12 px-4">
+                <div class="w-full lg:w-12/12">
                     <div class="relative w-full mb-3">
                         <label class="block uppercase text-blueGray-600 text-xs font-bold mb-2" htmlFor="grid-password">
                             Name
                         </label>
                         <input type="text"
-                            class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                            class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150 opacity-50"
                             value="Erasmsus CCT Bulgaria" />
                     </div>
                 </div>
-                <div class="w-full lg:w-12/12 px-4">
+                <div class="w-full lg:w-12/12">
                     <div class="relative w-full mb-3">
                         <label class="block uppercase text-blueGray-600 text-xs font-bold mb-2" htmlFor="grid-password">
                             Description
                         </label>
                         <input type="text"
-                            class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                            class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150 opacity-50"
                             value="This urban game is created specially for the mobility in Bulgaria" />
-                    </div>
-                </div>
-            </div>
-
-            <hr class="mt-6 border-b-1 border-blueGray-300" />
-
-            <h6 class="text-blueGray-400 text-sm mt-3 mb-6 font-bold uppercase">
-                Contact Information
-            </h6>
-            <div class="flex flex-wrap">
-                <div class="w-full lg:w-12/12 px-4">
-                    <div class="relative w-full mb-3">
-                        <label class="block uppercase text-blueGray-600 text-xs font-bold mb-2" htmlFor="grid-password">
-                            Address
-                        </label>
-                        <input type="text"
-                            class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                            value="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09" />
-                    </div>
-                </div>
-                <div class="w-full lg:w-4/12 px-4">
-                    <div class="relative w-full mb-3">
-                        <label class="block uppercase text-blueGray-600 text-xs font-bold mb-2" htmlFor="grid-password">
-                            City
-                        </label>
-                        <input type="email"
-                            class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                            value="New York" />
-                    </div>
-                </div>
-                <div class="w-full lg:w-4/12 px-4">
-                    <div class="relative w-full mb-3">
-                        <label class="block uppercase text-blueGray-600 text-xs font-bold mb-2" htmlFor="grid-password">
-                            Country
-                        </label>
-                        <input type="text"
-                            class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                            value="United States" />
-                    </div>
-                </div>
-                <div class="w-full lg:w-4/12 px-4">
-                    <div class="relative w-full mb-3">
-                        <label class="block uppercase text-blueGray-600 text-xs font-bold mb-2" htmlFor="grid-password">
-                            Postal Code
-                        </label>
-                        <input type="text"
-                            class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                            value="Postal Code" />
-                    </div>
-                </div>
-            </div>
-
-            <hr class="mt-6 border-b-1 border-blueGray-300" />
-
-            <h6 class="text-blueGray-400 text-sm mt-3 mb-6 font-bold uppercase">
-                About Me
-            </h6>
-            <div class="flex flex-wrap">
-                <div class="w-full lg:w-12/12 px-4">
-                    <div class="relative w-full mb-3">
-                        <label class="block uppercase text-blueGray-600 text-xs font-bold mb-2" htmlFor="grid-password">
-                            About me
-                        </label>
-                        <textarea type="text"
-                            class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                            rows="4">
-                  A beautiful UI Kit and Admin for Angular & Tailwind CSS. It is Free
-                  and Open Source.
-                </textarea>
                     </div>
                 </div>
             </div>
         </form>
     </div>
 </div>
+<br>
+
+<div class="relative flex flex-col break-words w-full mb-6 shadow-lg rounded-lg bg-blueGray-100 border-0 max-w-4xl"
+    style="margin: 0 auto;">
+    <div class="flex-auto px-4 lg:px-10 py-10 pt-0">
+        <div class="text-center flex justify-between">
+            <h6 class="text-blueGray-400 text-sm mt-3 mb-2 font-bold uppercase">
+                Riddle #1
+            </h6>
+            <div class="font-bold text-blueGray-700 hover:text-blueGray-500 ease-linear transition-all duration-150 mt-2"
+                style="cursor:pointer">
+                Preview 👀
+            </div>
+        </div>
+
+        <div class="text-center flex justify-between">
+            <details>
+                <summary>
+
+                    <div class="font-bold text-blueGray-700 hover:text-blueGray-500 ease-linear transition-all duration-150 mt-2 mb-2"
+                        style="cursor:pointer;">
+                        Add location 🌍
+                    </div>
+
+                    <div class="details-modal-overlay">
+                    </div>
+                </summary>
+                <div class="details-modal z-50" style="width: 50em;">
+                    <div class="details-modal-close" style="width: 9em;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M13.7071 1.70711C14.0976 1.31658 14.0976 0.683417 13.7071 0.292893C13.3166 -0.0976311 12.6834 -0.0976311 12.2929 0.292893L7 5.58579L1.70711 0.292893C1.31658 -0.0976311 0.683417 -0.0976311 0.292893 0.292893C-0.0976311 0.683417 -0.0976311 1.31658 0.292893 1.70711L5.58579 7L0.292893 12.2929C-0.0976311 12.6834 -0.0976311 13.3166 0.292893 13.7071C0.683417 14.0976 1.31658 14.0976 1.70711 13.7071L7 8.41421L12.2929 13.7071C12.6834 14.0976 13.3166 14.0976 13.7071 13.7071C14.0976 13.3166 14.0976 12.6834 13.7071 12.2929L8.41421 7L13.7071 1.70711Z"
+                                fill="black" />
+                        </svg>
+                    </div>
+                    <div class="details-modal-title" style="width: calc(100% - 9em);">
+                        <h1>Choose location 🧭</h1>
+                    </div>
+                    <div class="details-modal-content">
+                        <div class="relative flex w-full flex-wrap items-stretch mb-3">
+                            <span
+                                class="z-10 h-full leading-snug font-normal absolute text-center text-blueGray-300 absolute bg-transparent rounded text-base items-center justify-center w-8 pl-2 py-1">
+                                <i class="fas fa-location-arrow"></i>
+                            </span>
+                            <input type="text" placeholder="You haven't chosen a location yet."
+                                class="px-2 py-1 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm shadow outline-none focus:outline-none focus:shadow-outline w-full pl-10" />
+                        </div>
+                        <button
+                            class="text-emerald-500 bg-transparent border border-solid border-emerald-500 hover:bg-emerald-500 hover:text-white active:bg-emerald-600 font-bold uppercase text-xs px-4 py-2 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                            type="button">
+                            <i class="fas fa-map-marker-alt mr-1"></i> Current location
+                        </button>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2956.2241900735785!2d24.326820914826058!3d42.18827375392648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14aca55433444bd9%3A0xc3688eff67d8a31f!2sMathematical%20Secondary%20School%20Konstantin%20Velichkov!5e0!3m2!1sen!2sbg!4v1644666107160!5m2!1sen!2sbg"
+                            style="border:0; width: 46em; height: 22em;" allowfullscreen="" loading="lazy"></iframe>
+                        <div class="mt-6">
+                            <label class="inline-flex items-center cursor-pointer">
+                                <input id="customCheckLogin" type="checkbox"
+                                    class="form-checkbox text-emerald-700 ml-1 w-5 h-5 ease-linear transition-all duration-150 rounded" />
+                                <span class="ml-2 text-sm font-semibold text-blueGray-600">
+                                    Do you want navigation to be shown during this stage?
+                                </span>
+                            </label>
+                        </div>
+                        <button
+                            class="bg-emerald-600 text-white active:bg-emerald-700 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 ease-linear transition-all duration-150 float-right"
+                            type="button">
+                            Save changes
+                        </button>
+                    </div>
+                </div>
+            </details>
+            <div class="text-center flex justify-end">
+                <label for="number" class="text-emerald-700 mr-1">Points:</label>
+                <input type="number" id="points" name="points" step="1" min="0"
+                    class="text-emerald-700 border-none rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                    style="width: 25%; height: 1.5rem;">
+            </div>
+        </div>
+
+        <form>
+            <div class="flex flex-wrap">
+                <div class="w-full lg:w-12/12">
+                    <div class="relative w-full mb-3">
+                        <label class="block uppercase text-blueGray-600 text-xs font-bold mb-2" htmlFor="grid-password">
+                            Title
+                        </label>
+                        <input type="text"
+                            class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                            placeholder="Come up with a cool title..." />
+                    </div>
+                </div>
+                <div class="w-full lg:w-12/12">
+                    <div class="relative w-full mb-3">
+                        <label class="block uppercase text-blueGray-600 text-xs font-bold mb-2" htmlFor="grid-password">
+                            Description
+                        </label>
+                        <textarea rows="4" cols="80"
+                            class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full"
+                            placeholder="Some awesome words that will attract your participants..."></textarea>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div><br>
+
+<details>
+    <summary>
+
+        <div class="relative flex flex-col break-words w-full mb-6 shadow-lg rounded-lg bg-blueGray-100 border-0 max-w-4xl card-add-new-riddle"
+            style="margin: 0 auto; cursor: pointer;">
+            <div class="flex-auto px-4 lg:px-10 py-10 pt-0">
+                <form>
+                    <h6 class="text-blueGray-400 text-sm mt-3 mb-6 font-bold uppercase">
+                        Riddle #2
+                    </h6>
+                </form>
+
+                <div class="flex flex-wrap">
+                    <i class="fas fa-plus fa-2x" style="margin: 0 auto;"></i>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="details-modal-overlay"></div>
+    </summary>
+    <div class="details-modal z-50">
+        <div class="details-modal-close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M13.7071 1.70711C14.0976 1.31658 14.0976 0.683417 13.7071 0.292893C13.3166 -0.0976311 12.6834 -0.0976311 12.2929 0.292893L7 5.58579L1.70711 0.292893C1.31658 -0.0976311 0.683417 -0.0976311 0.292893 0.292893C-0.0976311 0.683417 -0.0976311 1.31658 0.292893 1.70711L5.58579 7L0.292893 12.2929C-0.0976311 12.6834 -0.0976311 13.3166 0.292893 13.7071C0.683417 14.0976 1.31658 14.0976 1.70711 13.7071L7 8.41421L12.2929 13.7071C12.6834 14.0976 13.3166 14.0976 13.7071 13.7071C14.0976 13.3166 14.0976 12.6834 13.7071 12.2929L8.41421 7L13.7071 1.70711Z"
+                    fill="black" />
+            </svg>
+        </div>
+        <div class="details-modal-title">
+            <h1>New riddle 📝</h1>
+        </div>
+        <div class="details-modal-content">
+            <div>
+                <h5>Hi</h5>
+                <button
+                  class="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                  type="button"
+                >
+                  <i class="fab fa-twitter"></i>
+                  
+                </button>
+                <button
+                  class="bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                  type="button"
+                >
+                  <i class="fab fa-facebook-square"></i>
+                </button>
+                <button
+                  class="bg-white text-pink-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                  type="button"
+                >
+                  <i class="fab fa-dribbble"></i>
+                </button>
+                <button
+                  class="bg-white text-blueGray-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                  type="button"
+                >
+                  <i class="fab fa-github"></i>
+                </button>
+              </div>
+            <br><br>
+            <button
+                class="bg-emerald-600 text-white active:bg-emerald-700 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 ease-linear transition-all duration-150 float-right"
+                type="button">
+                Add
+            </button>
+        </div>
+    </div>
+
+</details>
+
+<section class="block relative z-1 mt-4">
+    <div class="justify-end text-center flex flex-wrap mb-4">
+        <div class="w-full px-12">
+            <button
+                class="bg-emerald-600 text-white active:bg-emerald-700 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none ease-linear transition-all duration-150"
+                type="button">
+                Create
+            </button>
+        </div>
+    </div>
+</section>

@@ -3185,6 +3185,11 @@ select {
   color: rgba(16, 185, 129, var(--tw-text-opacity));
 }
 
+.text-emerald-700{
+  --tw-bg-opacity: 1;
+  color: rgba(5, 150, 105, var(--tw-bg-opacity));
+}
+
 .text-orange-500 {
   --tw-text-opacity: 1;
   color: rgba(249, 115, 22, var(--tw-text-opacity));

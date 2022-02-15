@@ -11,10 +11,5 @@ export class CreateGameDetailsComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  
-  showModal = false;
-  toggleModal(){
-    this.showModal = !this.showModal;
-  }
 
 }
