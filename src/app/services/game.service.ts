@@ -15,4 +15,20 @@ export class GameService {
   create(data): Observable<Game> {
     return this.http.post<Game>(this.gamePath, data);
   }
+
+  getGames(): Observable<Array<Game>> {
+    return this.http.get<Array<Game>>(this.gamePath);
+  }
+
+  getGame(id): Observable<Game> {
+    return this.http.get<Game>(this.gamePath + '/' + id)
+  }
+
+  editGame(data) {
+    return this.http.put(this.gamePath, data);
+  }
+
+  deleteGame(id) {
+    return this.http.delete(this.gamePath + '/' + id);
+  }
 }

@@ -55,7 +55,10 @@ import { CreateGameComponent } from './create-game/create-game.component';
 import {GameService} from './services/game.service';
 import {AuthGuardService} from "./services/auth-guard.service";
 import {TokenInterceptorService} from "./services/token-interceptor.service";
-import { CreateGameDetailsComponent } from './create-game-details/create-game-details.component';
+import { ListGamesComponent } from './list-games/list-games.component';
+import { DetailsGameComponent } from './details-game/details-game.component';
+import { EditGameComponent } from './edit-game/edit-game.component';
+import { ErrorInterceptorService } from "./services/error-interceptor.service";
 
 @NgModule({
   declarations: [
@@ -94,7 +97,9 @@ import { CreateGameDetailsComponent } from './create-game-details/create-game-de
     LandingComponent,
     ProfileComponent,
     CreateGameComponent,
-    CreateGameDetailsComponent,
+    ListGamesComponent,
+    DetailsGameComponent,
+    EditGameComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule, HttpClientModule],
   providers: [
@@ -104,6 +109,11 @@ import { CreateGameDetailsComponent } from './create-game-details/create-game-de
     {
       provide: HTTP_INTERCEPTORS,
       useClass: TokenInterceptorService,
+      multi: true
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: ErrorInterceptorService,
       multi: true
     }
   ],
