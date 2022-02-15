@@ -20,7 +20,7 @@ import { IndexComponent } from './views/index/index.component';
 import { LandingComponent } from './views/landing/landing.component';
 import { ProfileComponent } from './views/profile/profile.component';
 import {CreateGameComponent} from './create-game/create-game.component';
-import {AuthGuardService} from "./services/auth-guard.service";
+import {AuthGuardService} from './services/auth-guard.service';
 
 const routes: Routes = [
   // admin views

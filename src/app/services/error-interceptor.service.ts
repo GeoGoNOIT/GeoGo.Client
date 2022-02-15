@@ -14,16 +14,16 @@ export class ErrorInterceptorService implements HttpInterceptor{
       retry(1),
       catchError((err) => {
         if (err.status === 401) {
-          alert("401")
+          alert('401')
         }
         else if (err.status === 404) {
-          alert("404")
+          alert('404')
         }
         else if (err.status === 400) {
-          alert("400")
+          alert('400')
         }
         else {
-          alert("Some error")
+          alert('Some error')
         }
 
         return throwError(err)
