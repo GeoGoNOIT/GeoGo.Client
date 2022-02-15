@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Game } from '../models/Game';
-import { GameService } from '../services/game.service';
+import { Game } from '../../models/Game';
+import { GameService } from '../../services/game.service';
 
 @Component({
   selector: 'app-list-games',

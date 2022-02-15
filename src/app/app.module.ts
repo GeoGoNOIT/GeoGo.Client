@@ -51,13 +51,13 @@ import { UserDropdownComponent } from './components/dropdowns/user-dropdown/user
 import { ReactiveFormsModule } from '@angular/forms';
 import {AuthService} from './services/auth.service';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
-import { CreateGameComponent } from './create-game/create-game.component';
+import { CreateGameComponent } from './views/create-game/create-game.component';
 import {GameService} from './services/game.service';
 import {AuthGuardService} from './services/auth-guard.service';
 import {TokenInterceptorService} from './services/token-interceptor.service';
-import { ListGamesComponent } from './list-games/list-games.component';
-import { DetailsGameComponent } from './details-game/details-game.component';
-import { EditGameComponent } from './edit-game/edit-game.component';
+import { ListGamesComponent } from './views/list-games/list-games.component';
+import { DetailsGameComponent } from './views/details-game/details-game.component';
+import { EditGameComponent } from './views/edit-game/edit-game.component';
 import { ErrorInterceptorService } from './services/error-interceptor.service';
 
 @NgModule({
